@@ -1,9 +1,56 @@
-<h1><strong>About</strong></h1>
-<h1><strong>Fossil SCM </strong></h1>
+<h1>About</h1>
+<p>網頁:<span> <a href="https://50733146.github.io/fossil-repo/">https://50733146.github.io/fossil-repo/</a></span></p>
+<p>倉儲:<span> </span><a href="https://github.com/50733146/fossil-repo/" title="https://github.com/50733146/fossil-repo/">https://github.com/50733146/fossil-repo/</a></p>
+<p>架設網站: <a href="https://pj5073.cycu.org/" title="https://pj5073.cycu.org/">https://pj5073.cycu.org/</a></p>
+<p><a href="https://mde.tw/cd2022_guide"></a></p>
+<h1>Fossil SCM</h1>
+<p><strong>What Is Fossil?</strong></p>
+<p><strong>Fossil is a simple, high-reliability, distributed software configuration management system with these advanced features:</strong></p>
+<hr/>
+<ol>
+<li value="1"><strong>Project Management</strong> - In addition to doing <a href="https://www2.fossil-scm.org/home/doc/trunk/www/concepts.wiki">distributed version control</a> like Git and Mercurial, Fossil also supports <a href="https://www2.fossil-scm.org/home/doc/trunk/www/bugtheory.wiki">bug tracking</a>, <a href="https://www2.fossil-scm.org/home/doc/trunk/www/wikitheory.wiki">wiki</a>, <a href="https://www2.fossil-scm.org/home/doc/trunk/www/forum.wiki">forum</a>, <a href="https://www2.fossil-scm.org/home/doc/trunk/www/alerts.md">email alerts</a>, <a href="https://www2.fossil-scm.org/home/doc/trunk/www/chat.md">chat</a>, and <a href="https://www2.fossil-scm.org/home/doc/trunk/www/event.wiki">technotes</a>.</li>
+</ol>
+<ol>
+<li value="2"><strong>Built-in Web Interface</strong> - Fossil has a built-in, <a href="https://www2.fossil-scm.org/home/skins">themeable</a>, <a href="https://www2.fossil-scm.org/home/doc/trunk/www/serverext.wiki">extensible</a>, and intuitive <a href="https://www2.fossil-scm.org/home/doc/trunk/www/webui.wiki">web interface</a> with a rich variety of information pages (<a href="https://www2.fossil-scm.org/home/doc/trunk/www/webpage-ex.md">examples</a>) promoting situational awareness.This entire website is just a running instance of Fossil. The pages you see here are all <a href="https://www2.fossil-scm.org/home/doc/trunk/www/wikitheory.wiki">wiki</a> or <a href="https://www2.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki">embedded documentation</a> or (in the case of the <a href="https://www2.fossil-scm.org/home/uv/download.html">download</a> page) <a href="https://www2.fossil-scm.org/home/doc/trunk/www/unvers.wiki">unversioned files</a>. When you clone Fossil from one of its <a href="https://www2.fossil-scm.org/home/doc/trunk/www/selfhost.wiki">self-hosting repositories</a>, you get more than just source code - you get this entire website.</li>
+</ol>
+<ol>
+<li value="3"><strong>All-in-one</strong> - Fossil is a single self-contained, stand-alone executable. To install, simply download a <a href="https://www2.fossil-scm.org/home/uv/download.html">precompiled binary</a> for Linux, Mac, or Windows and put it on your $PATH. <a href="https://www2.fossil-scm.org/home/doc/trunk/www/build.wiki">Easy-to-compile source code</a> is also available.</li>
+</ol>
+<ol>
+<li value="4"><strong>Self-host Friendly</strong> - Stand up a project website in minutes using <a href="https://www2.fossil-scm.org/home/doc/trunk/www/server/">a variety of techniques</a>. Fossil is CPU and memory efficient. Most projects can be hosted comfortably on a $5/month VPS or a Raspberry Pi. You can also set up an automatic <a href="https://www2.fossil-scm.org/home/doc/trunk/www/mirrortogithub.md">GitHub mirror</a>.</li>
+</ol>
+<ol>
+<li value="5"><strong>Simple Networking</strong> - Fossil uses ordinary HTTPS (or SSH if you prefer) for network communications, so it works fine from behind firewalls and <a href="https://www2.fossil-scm.org/home/doc/trunk/www/quickstart.wiki#proxy">proxies</a>. The protocol is <a href="https://www2.fossil-scm.org/home/doc/trunk/www/stats.wiki">bandwidth efficient</a> to the point that Fossil can be used comfortably over dial-up, weak 3G, or airliner Wifi.</li>
+</ol>
+<ol>
+<li value="6"><strong>Autosync</strong> - Fossil supports <a href="https://www2.fossil-scm.org/home/doc/trunk/www/concepts.wiki#workflow">"autosync" mode</a> which helps to keep projects moving forward by reducing the amount of needless <a href="https://www2.fossil-scm.org/home/doc/trunk/www/branching.wiki">forking and merging</a> often associated with distributed projects.</li>
+</ol>
+<ol>
+<li value="7"><strong>Robust &amp; Reliable</strong> - Fossil stores content using an <a href="https://www2.fossil-scm.org/home/doc/trunk/www/fileformat.wiki">enduring file format</a> in an SQLite database so that transactions are atomic even if interrupted by a power loss or system crash. Automatic <a href="https://www2.fossil-scm.org/home/doc/trunk/www/selfcheck.wiki">self-checks</a> verify that all aspects of the repository are consistent prior to each commit.</li>
+</ol>
+<ol>
+<li value="8"><strong>Free and Open-Source</strong> - <a href="https://www2.fossil-scm.org/home/doc/trunk/COPYRIGHT-BSD2.txt">2-clause BSD license</a>.</li>
+</ol>
 <h1>NSSM</h1>
-<h1><strong>Stunnel</strong></h1>
-<h1><strong>Nginx</strong></h1>
-<h1><strong>SSL 憑證</strong></h1>
-<h1><b>fossiloauth</b></h1>
-<h1><b>fossilapp</b></h1>
-<h1><strong>來源</strong></h1>
+<p><strong>What Is NSSM?</strong></p>
+<p><strong>NSSM = the Non-Sucking Service Manager</strong></p>
+<p><strong><i>NSSM</i> functions very much like <em>srvany</em>. When started by the system service manager, it looks in the registry for the key HKLM\System\CurrentControlSet\Services\<em>servicename</em>\Parameters and tries to start the program listed in <em>Application</em>, starting in the directory listed in <em>AppDirectory</em> and passing the option flags listed in <em>AppParameters</em>. These values are the same as those which <em>srvany</em> reads, which means that <em>nssm</em> can be used as a direct replacement.</strong></p>
+<hr/>
+<p></p><h1>Stunnel</h1>
+<p><strong>What Is Stunnel?</strong></p>
+<p><strong>Stunnel is a proxy designed to add TLS encryption functionality to existing clients and servers without any changes in the programs' code.<span><span> </span>Its<span> </span></span>architecture<span><span> </span>is optimized for security, portability, and scalability (including load-balancing), making it suitable for large deployments.</span></strong></p>
+<hr/>
+<p></p><h1>Nginx</h1>
+<h1>SSL 憑證</h1>
+<h1>fossiloauth</h1>
+<p><strong>fossiloauth make use of OAuth 2.0 to access Google APIs(Gmail).</strong></p>
+<p><strong>Therefore,Flask use Oauth 2.0 to allow users to login and store the user's account in sessions.</strong></p>
+<p><strong>Then use SQLite to enter Fossil SCM warehouse to check user's account.</strong></p>
+<hr/>
+<p></p><h1><strong>fossilapp</strong></h1>
+<p><strong>fossilapp make use of OAuth 2.0 to access Google APIs(Gmail).</strong></p>
+<p><strong>Therefore, Flask use Oauth 2.0 to allow users to login and store the user's account in sessions.</strong></p>
+<p><strong>Then use SQLite to enter Fossil SCM warehouse to check user's account.</strong></p>
+<p><strong>Program coding with python and Flask, allow all relevant members to build their own warehousing and <span>CMS(Content Management System) to provide related services according to the task.</span></strong></p>
+<hr/>
+<p></p><h1>來源</h1>
