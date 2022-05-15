@@ -1,14 +1,12 @@
 \documentclass[14pt,a4paper]{report}  %紙張設定
-\usepackage{xeCJK}%中文字體模組
-%\setCJKmainfont{標楷體} %設定中文字體
+
+\usepackage{xeCJK} %中文字體模組
+%\setCJKmainfont{標楷體} %中文字體
 \setCJKmainfont{MoeStandardKai.ttf}
 %\newfontfamily\sectionef{Times New Roman}%設定英文字體
 \newfontfamily\sectionef{Nimbus Roman}
-\usepackage{enumerate}
-\usepackage{amsmath,amssymb}%數學公式、符號
-\usepackage{amsfonts} %數學簍空的英文字
-\usepackage{graphicx, subfigure}%圖形
-\usepackage{fontawesome5} %引用icon
+\usepackage{amsmath,amssymb} %數學公式、符號
+\usepackage{graphicx,subfigure} %圖形
 \usepackage{type1cm} %調整字體絕對大小
 \usepackage{textpos} %設定文字絕對位置
 \usepackage[top=2.5truecm,bottom=2.5truecm,
@@ -16,138 +14,80 @@ left=3truecm,right=2.5truecm]{geometry}
 \usepackage{titlesec} %目錄標題設定模組
 \usepackage{titletoc} %目錄內容設定模組
 \usepackage{textcomp} %表格設定模組
-\usepackage{multirow} %合併行
-%\usepackage{multicol} %合併欄
+\usepackage{caption} %圖片標題設定
 \usepackage{CJK} %中文模組
 \usepackage{CJKnumb} %中文數字模組
-\usepackage{wallpaper} %浮水印
+%\usepackage{wallpaper} %浮水印
+\usepackage{float}
+\usepackage{enumerate}
 \usepackage{listings} %引用程式碼
-\usepackage{hyperref} %引用url連結
 \usepackage{setspace}
-\usepackage{lscape}%設定橫式
-\lstset{language=Python, %設定語言
-		basicstyle=\fontsize{10pt}{2pt}\selectfont, %設定程式內文字體大小
-		frame=lines,	%設定程式框架為線
-}
-%\usepackage{subcaption}%副圖標
-\graphicspath{{./../images/}} %圖片預設讀取路徑
-\usepackage{indentfirst} %設定開頭縮排模組
-\renewcommand{\figurename}{\Large 圖.} %更改圖片標題名稱
-\renewcommand{\tablename}{\Large 表.}
-\renewcommand{\lstlistingname}{\Large 程式.} %設定程式標示名稱
-\hoffset=-5mm %調整左右邊界
-\voffset=-8mm %調整上下邊界
-\setlength{\parindent}{3em}%設定首行行距縮排
-\usepackage{appendix} %附錄
-\usepackage{diagbox}%引用表格
-\usepackage{multirow}%表格置中
-%\usepackage{number line}
+\usepackage{blindtext} 
+\graphicspath{{img/}} %圖片預設讀取路徑
+\renewcommand{\figurename}{\large 圖} %更改圖片標題名稱
+
+
 %=------------------更改標題內容----------------------=%
-\titleformat{\chapter}[hang]{\center\sectionef\fontsize{20pt}{1pt}\bfseries}{\LARGE 第\CJKnumber{\thechapter}章}{1em}{}[]
+\titleformat{\chapter}[hang]{\center\sectionef\fontsize{20pt}{1pt}\bfseries}{}{}{}
 \titleformat{\section}[hang]{\sectionef\fontsize{18pt}{2.5pt}\bfseries}{{\thesection}}{0.5em}{}[]
 \titleformat{\subsection}[hang]{\sectionef\fontsize{18pt}{2.5pt}\bfseries}{{\thesubsection}}{1em}{}[]
-%=------------------更改目錄內容-----------------------=%
-\titlecontents{chapter}[11mm]{}{\sectionef\fontsize{18pt}{2.5pt}\bfseries\makebox[3.5em][l]
-{第\CJKnumber{\thecontentslabel}章}}{}{\titlerule*[0.7pc]{.}\contentspage}
-\titlecontents{section}[18mm]{}{\sectionef\LARGE\makebox[1.5em][l]
-{\thecontentslabel}}{}{\titlerule*[0.7pc]{.}\contentspage}
-\titlecontents{subsection}[4em]{}{\sectionef\Large\makebox[2.5em][l]{{\thecontentslabel}}}{}{\titlerule*[0.7pc]{.}\contentspage}
-%=----------------------章節間距----------------------=%
+
+%=------------------更改目錄內容----------------------=%
+\titlecontents{chapter}[-5em]{}{\sectionef\fontsize{16pt}{3pt}\bfseries\makebox[2.5em][l]{\CJKmainfont}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{section}[3em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[1.5em][l]{\thecontentslabel}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{subsection}[5em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[2.5em][l]{{\thecontentslabel}}}{}{\titlerule*[0.7pc]{.}\contentspage}
+
+%=------------------更改圖目錄內容----------------------=%
+\titlecontents{figure}[1em]{}{\sectionef\fontsize{16pt}{3pt}\mdseries\makebox[1.5em][l]圖{\thecontentslabel}\quad}{}{\titlerule*[0.7pc]{.}\contentspage}
+
+%=------------------章節間距----------------------=%
 \titlespacing*{\chapter} {0pt}{0pt}{18pt}
 \titlespacing*{\section} {0pt}{12pt}{6pt}
 \titlespacing*{\subsection} {0pt}{6pt}{6pt}
-%=----------------------標題-------------------------=%             
-\begin{document} %文件
-\sectionef %設定英文字體啟用
-\vspace{12em}
-\begin{titlepage}%開頭
-\begin{center}   %標題  
+
+%=------------------文件----------------------=%
+\begin{document}
+\begin{titlepage}
+%\maketitle %文件資料
+\begin{center}
+\makebox[1.5\width][s] %設定文字盒子[方框寬度的1.5倍寬][對其方式為文字平均分分布於方框中]
+{\fontsize{24pt}{2.5pt}國立虎尾科技大學}\\[15pt] %\\距離下方5pt
+%{\ten{National Formosa University}}\\[20pt]
+\makebox[1.2\width][s]
+{\fontsize{24pt}{2.5pt}機械設計工程系暨精密機械工程科}\\[15pt]
+%{\ten{Department of Mechanical Design Engineering \& Department of Junior Precision Mechanical Engineering}}\\[20pt]
 \makebox[1.5\width][s]
-{\fontsize{24pt}{2.5pt}國立虎尾科技大學}\\[18pt]
-\makebox[1.5\width][s]
-{\fontsize{24pt}{2.5pt}工程學院機械設計工程系}\\[18pt]
-\makebox[1.5\width][s]
-{\fontsize{24pt}{2.5pt}專題製作報告}\\[18pt]
-%設定文字盒子 [方框寬度的1.5倍寬][對其方式為文字平均分分布於方框中]\\距離下方18pt
-\vspace{6em} %下移
-\fontsize{30pt}{1pt}\selectfont\textbf{強化學習在機電系統中之應用}\\
-\vspace{1em}
-\sectionef\fontsize{30pt}{1em}\selectfont\textbf
-{
-\vspace{0.5em}
-Application of reinforcement
- \vspace{0.5em} 
- learning in mechatronic systems}
- \vspace{2em}
-%=---------------------參與人員-----------------------=%             
+{\fontsize{24pt}{2.5pt}專題製作報告}\\[120pt]
+%{\ten{Project\quad Report}}\\[80pt]
+{\fontsize{24pt}{2.5pt}網際內容管理系統}\\
+%{\ten{Application of Web-based Content Management Systems}\\[5pt]
+{\fontsize{24pt}{2.5pt}在精密機械工程教學與研究上的應用}\\[50pt]
+%{\ten{in Teaching and Research of Precision Mechanical Engineering}}
+{\fontsize{18pt}{2.5pt}\bf Application of Web-based Content Management Systems in Teaching and Research of Precision Mechanical Engineering}
 \end{center}
 \begin{flushleft}
 \begin{LARGE}
-
-\hspace{32mm}\makebox[5cm][s]
+\vspace{5em}
+\hspace{32mm}\makebox[5cm][s]%空白距離32mm,設定文字盒子[寬度為5cm][對其方式為文字平均分分布於方框中]
 {指導教授：\quad 嚴\quad 家\quad 銘\quad 老\quad 師}\\[6pt]
 \hspace{32mm}\makebox[5cm][s]
-{班\qquad 級：\quad 四\quad 設\quad 三\quad 甲}\\[6pt]
+{班\qquad 級：\quad 五\quad 精\quad 四\quad 甲}\\[6pt]
 \hspace{32mm}\makebox[5cm][s]
-{學\qquad 生：\quad 李\quad 正\quad 揚\quad(40723110)}
-\\[6pt]
+{學\qquad 生：\quad 郭\qquad \quad 樺\quad(50733105)}\\[6pt]
 \hspace{32mm}\makebox[5cm][s]
-{\hspace{36.5mm}林\quad 于\quad 哲\quad(40723115)}\\[6pt]
+{\hspace{36.5mm}高\quad 沁\quad 安\quad(50733144)}\\[6pt]
 \hspace{32mm}\makebox[5cm][s]
-{\hspace{36.5mm}黃\quad 奕\quad 慶\quad(40723138)}\\[6pt]
+{\hspace{36.5mm}林\quad 冠\quad 澔\quad(50733146)}\\[6pt]
 \hspace{32mm}\makebox[5cm][s]
-{\hspace{36.5mm}鄭\quad 博\quad 鴻\quad(40723148)}\\[6pt]
-\hspace{32mm}\makebox[5cm][s]
-{\hspace{36.5mm}簡\quad 國\quad 龍\quad(40723150)}\\[6pt]
-%設定文字盒子[寬度為5cm][對其方式為文字平均分分布於方框中]空白距離{36.5mm}\空白1em
+{\hspace{36.5mm}林\quad 侑\quad 昌\quad(50733152)}\\[6pt]
 \end{LARGE}
 \end{flushleft}
 \vspace{6em}
 \fontsize{18pt}{2pt}\selectfont\centerline{\makebox[\width][s]
 {中華民國\hspace{3em} 
 110 \quad 年\quad 6\quad 月}}
+\par
 \end{titlepage}
-\newpage
-%=---------------專題製作合可證明---------------------=%
- {\renewcommand\baselinestretch{1.4}\selectfont %設定以下行距
- {\begin{center}
-    {\fontsize{20pt}{2.5pt} {國立虎尾科技大學 \qquad 機械設計工程系}\\[8pt]{學生專題製作合格認可證明}\\
-    \hspace*{\fill} \\ %似enter鍵換行
-    \par}
-     \end{center}}
-    {\begin{textblock}{60}(1.85,0.8)
-    \noindent \fontsize{15pt}{16pt}\selectfont 專題製作修習學生\enspace:\quad
-    {\begin{minipage}[t]{10em}\underline{四設三甲\enspace 40723110\enspace 李正揚}\\ \underline{四設三甲\enspace 40723115\enspace 林于哲}\\ \underline{四設三甲\enspace 40723138\enspace 黃奕慶}\\ \underline{四設三甲\enspace 40723148\enspace 鄭博鴻}\\ \underline{四設三甲\enspace 40723150\enspace 簡國龍}\\ %下劃線符號指令
-    \end{minipage}}
-         \par} %結束指定行距
-    {\renewcommand\baselinestretch{1.2}\selectfont %設定以下行距
-    {\begin{textblock}{30}(1.8,4)
-    \noindent \fontsize{16pt}{16pt}\selectfont 專題製作題目\enspace ：強化學習在機電系統中之應用
-    \hspace*{\fill} \\
-    \hspace*{\fill} \\
-    \noindent \fontsize{16pt}{16pt}\selectfont 經評量合格，特此證明
-    \hspace*{\fill} \\
-    \hspace*{\fill} \\
-    \noindent \fontsize{16pt}{16pt} \makebox[6em][s]{評審委員}\enspace:\quad
-    {\begin{minipage}[t]{6em} \underline{　　　　　　　　　　　　}\\[16pt] \underline{　　　　　　　　　　　　}\\[16pt] \underline{　　　　　　　　　　　　}\\
-    \end{minipage}}
-    \end{textblock}}
-    {\begin{textblock}{10}(1.8,9)
-    {\begin{flushleft}
-    \fontsize{16pt}{16pt}\selectfont \makebox[6em][s]{指導老師}\enspace:\quad \underline{　　　　　　　　　　　　}\\[10pt]
-    \fontsize{16pt}{16pt}\selectfont \makebox[6em][s]{系主任}\enspace:\quad \underline{　　　　　　　　　　　　}\\
-    \hspace*{\fill} \\
-    \fontsize{16pt}{2.5pt}\selectfont \makebox[12em][s]{中華民國一一零年}\hspace{2pt}
-    \fontsize{16pt}{2.5pt}\selectfont\makebox[8em][s]{六月二十日}
-    \end{flushleft}}
-    \end{textblock}}
-    \end{textblock}}
-     \par} %結束指定行距
-     \newpage
-
-%=------------------------摘要-----------------------=%
-\input{abstract.tex}
-\newpage
 %=------------------------誌謝----------------------=%
 \addcontentsline{toc}{chapter}{誌~~~謝}
 \centerline\LARGE\textbf{誌~~謝}\\
@@ -172,21 +112,7 @@ Application of reinforcement
 \listoftables
 
 \end{center}
-%=-------------------------內容----------------------=%
-\input{1_introduction.tex}
-\input{2_machine_learning.tex}
-\input{3_training_env.tex}
-\input{4_simulation.tex}
-\input{5_server.tex}
-\input{6_training_result.tex}
-\input{7_suggestion.tex}
-\input{8_discussions.tex}
-%=---------------------參考文獻----------------------=%
-\input{9_reference.tex}
-%=---------------附錄-----------------=%
-\addcontentsline{toc}{chapter}{附錄} %新增目錄名稱
-\input{10_appendix.tex}
-\newpage
+
 %=-------------作者簡介-----------------=%
     \addcontentsline{toc}{chapter}{作者簡介}
     \begin{center}
