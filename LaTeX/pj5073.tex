@@ -121,9 +121,10 @@ left=3truecm,right=2.5truecm]{geometry}
 \input{tk.tex}
 
 %=------------------目錄----------------------=%
-\newpage
-\input{content.tex}
-
+%\newpage
+%\input{content.tex}
+\renewcommand{\contentsname}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{目\quad 錄}}}
+\tableofcontents %目錄產生
 
 %=------------------前言----------------------=%
 %\newpage
