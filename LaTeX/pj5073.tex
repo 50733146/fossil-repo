@@ -1,4 +1,11 @@
 \documentclass[14pt,a4paper]{report}  %紙張設定
+
+%=------------------文件資料----------------------=%
+\title{Application of Web-based Content Management Systems in Teaching and Research of Precision Mechanical Engineering}
+\author{Author: pj5073}
+\date{Date: 2022.03.19}
+
+%=------------------模組----------------------=%
 \usepackage{xeCJK}%中文字體模組
 %\setCJKmainfont{標楷體} %設定中文字體
 \setCJKmainfont{MoeStandardKai.ttf}
@@ -49,15 +56,15 @@ left=3truecm,right=2.5truecm]{geometry}
 \titleformat{\subsection}[hang]{\sectionef\fontsize{18pt}{2.5pt}\bfseries}{{\thesubsection}}{1em}{}[]
 
 %=------------------更改目錄內容-----------------------=%
-\titlecontents{chapter}[1em]{}{\sectionef\fontsize{16pt}{3pt}\bfseries\makebox[4.5em][l]{第\CJKnumber{\thecontentslabel}章}}{}{\titlerule*[0.7pc]{.}\contentspage}
-\titlecontents{section}[3em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[3em][l]{\thecontentslabel}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{chapter}[1em]{}{\sectionef\fontsize{16pt}{3pt}\bfseries\makebox[4em][l]{第\CJKnumber{\thecontentslabel}章}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{section}[3.5em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[2.5em][l]{\thecontentslabel}}{}{\titlerule*[0.7pc]{.}\contentspage}
 \titlecontents{subsection}[5em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[3em][l]{{\thecontentslabel}}}{}{\titlerule*[0.7pc]{.}\contentspage}
 %=----------------------章節間距----------------------=%
 \titlespacing*{\chapter} {0pt}{0pt}{18pt}
 \titlespacing*{\section} {0pt}{12pt}{6pt}
 \titlespacing*{\subsection} {0pt}{6pt}{6pt}
 
-%=----------------------標題-------------------------=%
+%=----------------------文件-------------------------=%
 \begin{document} %文件
 \begin{titlepage}%開頭         
 \begin{center}
@@ -103,6 +110,10 @@ left=3truecm,right=2.5truecm]{geometry}
 %=------------------圖目錄----------------------=%
 %\newpage
 %\input{picture.tex}
+\begin{spacing}{2.5}
+\renewcommand{\listfigurename}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{圖\quad 目\quad 錄 }}}
+\newcommand{\loflabel}{圖}
+\end{spacing}
 
 %=---------------專題製作合可證明---------------------=%
 %\newpage
