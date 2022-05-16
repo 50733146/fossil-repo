@@ -61,7 +61,7 @@ left=3truecm,right=2.5truecm]{geometry}
 \titlecontents{subsection}[5em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[3em][l]{{\thecontentslabel}}}{}{\titlerule*[0.7pc]{.}\contentspage}
 
 %=------------------更改圖目錄內容----------------------=%
-\titlecontents{figure}[1em]{}{\sectionef\fontsize{16pt}{3pt}\mdseries\makebox[1.5em][l]圖{\thecontentslabel}\quad}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{figure}[1em]{}{\sectionef\fontsize{16pt}{3pt}\mdseries\makebox[1.5em][l]圖{\thecontentslabel}\quad}{\sixteen}{\titlerule*[0.7pc]{.}\contentspage}
 
 %=----------------------章節間距----------------------=%
 \titlespacing*{\chapter} {0pt}{0pt}{18pt}
@@ -133,6 +133,7 @@ left=3truecm,right=2.5truecm]{geometry}
 \begin{spacing}{2.5}
 \renewcommand{\contentsname}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{目\quad 錄}}}
 \tableofcontents %目錄產生
+\pagenumbering{empty}%隱藏頁數
 \end{spacing}
 
 %=------------------圖目錄----------------------=%
@@ -141,7 +142,7 @@ left=3truecm,right=2.5truecm]{geometry}
 \begin{spacing}{2.5}
 \renewcommand{\listfigurename}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{圖\quad 目\quad 錄 }}}
 \listoffigures
-\newcommand{\loflabel}{圖}
+\pagenumbering{empty}%隱藏頁數
 \end{spacing}
 
 %=------------------前言----------------------=%
