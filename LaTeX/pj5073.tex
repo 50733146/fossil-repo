@@ -49,9 +49,9 @@ left=3truecm,right=2.5truecm]{geometry}
 \titleformat{\subsection}[hang]{\sectionef\fontsize{18pt}{2.5pt}\bfseries}{{\thesubsection}}{1em}{}[]
 
 %=------------------更改目錄內容-----------------------=%
-\titlecontents{chapter}[1em]{}{\sectionef\fontsize{16pt}{3pt}\bfseries\makebox[3em][l]{第\CJKnumber{\thecontentslabel}章}}{}{\titlerule*[0.7pc]{.}\contentspage}
-\titlecontents{section}[3em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[1.5em][l]{\thecontentslabel}}{}{\titlerule*[0.7pc]{.}\contentspage}
-\titlecontents{subsection}[5em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[2.5em][l]{{\thecontentslabel}}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{chapter}[1em]{}{\sectionef\fontsize{16pt}{3pt}\bfseries\makebox[4.5em][l]{第\CJKnumber{\thecontentslabel}章}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{section}[3em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[3em][l]{\thecontentslabel}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{subsection}[5em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[3em][l]{{\thecontentslabel}}}{}{\titlerule*[0.7pc]{.}\contentspage}
 %=----------------------章節間距----------------------=%
 \titlespacing*{\chapter} {0pt}{0pt}{18pt}
 \titlespacing*{\section} {0pt}{12pt}{6pt}
@@ -123,9 +123,10 @@ left=3truecm,right=2.5truecm]{geometry}
 %=------------------目錄----------------------=%
 %\newpage
 %\input{content.tex}
+\begin{spacing}{2.5}
 \renewcommand{\contentsname}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{目\quad 錄}}}
 \tableofcontents %目錄產生
-
+\end{spacing}
 
 
 
