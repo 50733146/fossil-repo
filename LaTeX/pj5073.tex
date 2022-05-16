@@ -107,14 +107,6 @@ left=3truecm,right=2.5truecm]{geometry}
 \end{titlepage}
 \newpage
 
-%=------------------圖目錄----------------------=%
-%\newpage
-%\input{picture.tex}
-\begin{spacing}{2.5}
-\renewcommand{\listfigurename}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{圖\quad 目\quad 錄 }}}
-\newcommand{\loflabel}{圖}
-\end{spacing}
-
 %=---------------專題製作合可證明---------------------=%
 %\newpage
 \input{certification.tex}
@@ -139,7 +131,14 @@ left=3truecm,right=2.5truecm]{geometry}
 \tableofcontents %目錄產生
 \end{spacing}
 
-
+%=------------------圖目錄----------------------=%
+%\newpage
+%\input{picture.tex}
+\begin{spacing}{2.5}
+\renewcommand{\listfigurename}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{圖\quad 目\quad 錄 }}}
+\listoffigures
+\newcommand{\loflabel}{圖}
+\end{spacing}
 
 %=------------------前言----------------------=%
 %\newpage
