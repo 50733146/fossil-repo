@@ -49,7 +49,7 @@ left=3truecm,right=2.5truecm]{geometry}
 \titleformat{\subsection}[hang]{\sectionef\fontsize{18pt}{2.5pt}\bfseries}{{\thesubsection}}{1em}{}[]
 
 %=------------------更改目錄內容-----------------------=%
-\titlecontents{chapter}[2em]{}{\sectionef\fontsize{16pt}{3pt}\bfseries\makebox[2.5em][l]{第\CJKnumber{\thecontentslabel}章}}{}{\titlerule*[0.7pc]{.}\contentspage}
+\titlecontents{chapter}[1em]{}{\sectionef\fontsize{16pt}{3pt}\bfseries\makebox[3em][l]{第\CJKnumber{\thecontentslabel}章}}{}{\titlerule*[0.7pc]{.}\contentspage}
 \titlecontents{section}[3em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[1.5em][l]{\thecontentslabel}}{}{\titlerule*[0.7pc]{.}\contentspage}
 \titlecontents{subsection}[5em]{}{\sectionef\fontsize{15pt}{3pt}\mdseries\makebox[2.5em][l]{{\thecontentslabel}}}{}{\titlerule*[0.7pc]{.}\contentspage}
 %=----------------------章節間距----------------------=%
@@ -123,14 +123,10 @@ left=3truecm,right=2.5truecm]{geometry}
 %=------------------目錄----------------------=%
 %\newpage
 %\input{content.tex}
-\addcontentsline{toc}{chapter}{\LARGE 摘要}
-\addcontentsline{toc}{chapter}{abstract}
-\addcontentsline{toc}{chapter}{致謝}
 \renewcommand{\contentsname}{\centerline{\fontsize{18pt}{\baselineskip}\selectfont\textbf{目\quad 錄}}}
 \tableofcontents %目錄產生
-\addcontentsline{toc}{chapter}{參考文獻}
-\addcontentsline{toc}{chapter}{附錄}
-\addcontentsline{toc}{chapter}{作者簡介}
+
+
 
 
 %=------------------前言----------------------=%
